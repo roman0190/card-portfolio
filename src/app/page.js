@@ -6,7 +6,7 @@ export default function Home() {
       <div>
         <Image
           className="absolute w-screen h-[68rem] lg:h-full blur-sm"
-          src="./images/1.png"
+          src="/images/1.png"
           alt="alt"
           width={1440}
           height={1440}
@@ -14,7 +14,7 @@ export default function Home() {
         <nav className=" sticky bg-green-400/20 h-18 flex items-center p-[1rem] rounded-b-lg justify-between ">
           <Image
             className="lg:w-20 lg:h-20 w-14 h-14"
-            src="./images/icon/icon.png"
+            src="/images/icon/icon.png"
             alt="alt"
             width={400}
             height={400}
@@ -45,7 +45,7 @@ export default function Home() {
                 <div className="relative h-60 w-60 lg:h-96 lg:w-96 rounded-full border-transparent  border-glow">
                   <Image
                     className="h-full w-full rounded-full object-cover"
-                    src="./images/2.png"
+                    src="/images/2.png"
                     alt="alt"
                     width={400}
                     height={400}
