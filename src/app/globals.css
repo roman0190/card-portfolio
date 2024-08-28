@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+
+/* Gradient Text */
+
+
+/* Typewriter Effect */
+.typewriter {
+  display: inline-block;
+  overflow: hidden; /* Ensures text is hidden during animation */
+  white-space: nowrap; /* Keeps text in a single line */
+  border-right: 3px solid black; /* Creates the blinking caret effect */
+  animation: typing 7s steps(40, end) infinite, blink-caret 0s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 85%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+
+
+/* styles/globals.css or similar */
+@layer utilities {
+  .border-glow {
+    border-color: transparent;
+    box-shadow: 0 0 10px 2px rgba(20, 22, 34, 0.7), 0 0 20px 5px rgba(51, 144, 37, 0.5);
+    animation: glow 1.0s infinite alternate;
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 5px 2px rgba(0, 255, 255, 0.5);
+    }
+    to {
+      box-shadow: 0 0 20px 5px rgba(0, 255, 255, 0.7);
+    }
+  }
+}
